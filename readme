@@ -1,0 +1,125 @@
+
+INSERT INTO `contact` (`id`, `phone_number1`, `phone_number2`, `person_id`) VALUES ('1', '676666666', '67666666', '1');
+
+INSERT INTO `person` (`id`, `email`, `givenname`, `surname`) VALUES ('1', 'rose@g.m', 'rose', 'basal');
+
+INSERT INTO `address` (`person_id`, `town`, `country`, `street`) VALUES ('1', 'limbe', 'cameroon', 'sappa road');
+
+==========relationship establish
+
+A Person may have 1 or m contacts
+A Person may have 1 or m address
+A contact can be assign to an Address
+
+# TODO
+
+============= on JSP
+1. Solve the problem of home-page redirect (from create-view to list-view).
+2. remove all alerts
+
+============= on JAVASCRIPT
+3. add bootstrap validator || js or jquery validator on your 
+4. collect all data from the form ui and send via ajax
+5. call controller post request to persist data via the .
+
+=============== on JAVA
+
+
+
+
+MAJOR UPDATES THAT HAVE BEEN DONE
+
+====29-Dec-2020
+
+- Define openNav (Overlay) function
+- Define Ajax function
+- Define doget function
+- Import jquery into project
+
+
+========= 02-jan-2021
+- add fonts to static directory
+- downgrade spring-boot project from version 2.4 to 2.2.4
+- work on detail and update action (on view, js and controller)
+
+ 
+========= 0-jan-2021
+- Import bootstrap(css and js) into project
+
+
+
+=========08-February-2021
+
+
+//query for the creation of ROLE 
+INSERT INTO `roles` (`id`, `role_desc`, `role_name`) VALUES 
+('1', 'ROLE ADMIN', 'ROLE_ADMIN' ), 
+('2', 'ROLE USER', 'ROLE_USER');
+
+
+
+//query for the creation of USER_ROLE TABLE 
+INSERT INTO `user_role` (`user_id`, `role_id`) VALUES 
+('1', '1'),
+('1', '2');
+
+//query for the creation of USER 
+INSERT INTO `users` (`id`, `user_address`, `user_dob`, `user_email`, `user_given_name`, `user_name`, `user_password`, `user_sur_name`) VALUES 
+('1', 'limbe', '14-february-2000', 'rose@gmail.com', 'nahgela', 'rose', 'root', 'roselyn');
+
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_full_page_tabs
+
+
+
+======================
+		
+<%--  <c:set var = "value"  value = "detail"/>			
+<c:if test="${value == 'detail' || value.equals('detail') }"> --%>
+				
+				
+				
+		<!-- start openNav overlay -->
+		 
+		 <!-- The overlay -->
+		<div id="myNav" class="overlay">
+		
+			  <!-- Button to close the overlay navigation -->
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			
+			  <!-- Overlay content -->
+			  <div class="overlay-content">
+			  
+			              <jsp:include page="details.jsp" />
+			       
+			  </div>
+		
+		</div>
+		<!-- end openNav overlay -->
+<%-- 		
+</c:if>
+		
+<c:if test=	"${ value != 'detail' || !value.equals('detail') }"> --%>	
+		<!-- start openNav overlay -->
+		 
+		 <!-- The overlay -->
+		<div id="myNav1" class="overlay">
+		
+			  <!-- Button to close the overlay navigation -->
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+			
+			  <!-- Overlay content -->
+			  <div class="overlay-content">
+			  
+			              <jsp:include page="update.jsp" /> 
+			       
+			  </div>
+		
+		</div>
+		<!-- end openNav overlay -->
+		
+<%-- </c:if>	 --%>
+		
+		
+		
+	

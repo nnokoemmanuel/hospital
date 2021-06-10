@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#responsive-form{
+	max-width:100% /*-- change this to get your desired form width --*/;
+	margin:0 auto;
+        width:40%;
+}
+
+.form-row{
+	width: 100%;
+}
+.column-half, .column-full{
+	float: left;
+	position: relative;
+	padding: 0.65rem;
+	width:100%;
+	-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.form-row input[type="text"], .form-row input[type="email"], .form-row textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	-webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	      box-sizing: border-box
+}
+h5{
+margin-top: 25px;
+  margin-bottom: 0px;
+  resize: vertical;
+padding-top: 30px;
+}
+	
+.form-row input[type="text"]:focus{
+	background: #fff;
+}
+button{
+	float: left;
+	background: #CA0002;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	padding: 8px 20px;
+	cursor: pointer;
+}
+button:hover{
+	background: #ff0000;
+}
+form-row {
+	text-shadow: none;
+	font-size: 12px;
+	color: black;
+	
+	padding: 5px;
+}
+div.form-row-validation-errors { 
+	text-shadow: none;
+	border: transparent;
+	background: #f9cd00;
+	padding: 5px;
+	color: #9C6533;
+	text-align: center;
+	margin: 0;
+	font-size: 12px;
+}
+div.form-row-mail-sent-ok{
+	text-align: center;
+	text-shadow: none;
+	padding: 5px;
+	font-size: 12px;
+	background: #59a80f;
+	border-color: #59a80f;
+	color: #fff;
+	margin: 0;
+}
+
+/**---------------- Media query ----------------**/
+@media only screen and (min-width: 48em) { 
+	.column-half{
+		width: 50%;
+	}
+}
+
